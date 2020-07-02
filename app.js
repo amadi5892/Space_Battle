@@ -1,16 +1,13 @@
 $(document).keypress("a", function() {
     $(".box1").animate({
-        "left": "+=1000px"
-    }, 3000)
+        "left": "50%"
+    }, 20000)
 
-    $(".box1").animate({
-        "left": "+=1000px"
-    }, 3000)
 });
 
-$(".box2").animate({
-    "left": "3000px"
-}, 7500);
+// $(".box2").animate({
+//     "left": "3000px"
+// }, 7500);
 
 
 // $(document).keydown(function(event) {

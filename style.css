@@ -1,6 +1,5 @@
 .container {
     border: solid;
-    width: 5000px;
     height: 100vh;
 }
 .box1 {
@@ -8,7 +7,7 @@
     background-color: blue;
     width: 80px;
     height: 80px;
-    margin-left: 50px;
+    right: -80px;
 }
 
 .box2 {
