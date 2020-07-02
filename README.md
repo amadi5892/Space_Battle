@@ -24,3 +24,6 @@
 
 ### Step 8: 
 > Add visuals
+
+## Nots for Thinking:
+> Create a contianer for the view, extend it past the viewport. This should create our racetrack that extends beyond the width of the screen. 

@@ -1,0 +1,21 @@
+body {
+    border: solid;
+    width: 2000px;
+    height: 100vh;
+}
+.box1 {
+    position: absolute;
+    background-color: blue;
+    width: 80px;
+    height: 80px;
+    margin-left: 50px;
+}
+
+.box2 {
+    position: absolute;
+    background-color: red;
+    width: 80px;
+    height: 80px;
+    margin-top: 105px;
+    margin-left: 50px;
+}
