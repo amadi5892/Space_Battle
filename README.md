@@ -11,18 +11,21 @@
 > Control the speeds of the car
 
 ### Step 4:
+> Configure Math for racing
+
+### Step 5:
 > Implement random key prompts for the user to speed up their car agaist the computer
 
-### Step 5: 
+### Step 6: 
 > Create conditionals for when keys are hit/missed
 
-### Step 6: 
+### Step 7: 
 > Add buttons for UI
 
-### Step 7: 
+### Step 8: 
 > Display results of the race
 
-### Step 8: 
+### Step 9: 
 > Add visuals
 
 ## Nots for Thinking:

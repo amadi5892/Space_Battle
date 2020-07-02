@@ -1,6 +1,6 @@
-body {
+.container {
     border: solid;
-    width: 2000px;
+    width: 5000px;
     height: 100vh;
 }
 .box1 {
