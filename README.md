@@ -28,5 +28,13 @@
 ### Step 9: 
 > Add visuals
 
-## Nots for Thinking:
-> Create a contianer for the view, extend it past the viewport. This should create our racetrack that extends beyond the width of the screen. 
+## ***Notes for Thinking:***
+ * Create a contianer for the view, extend it past the viewport. This should create our racetrack that extends beyond the width of the screen.
+
+ * #### Movement Visuals: 
+    * Set finish line to a position off the screen. Ex: -50px
+    * Move finish line towards the cars(center sreen). Ex: current_position_ + speed(movement); offset from the right 
+    * Cars should be set to an absolut position. Track should be set to a relative position.
+
+* #### Visual Effects:
+    * if statement for objects going out of the container

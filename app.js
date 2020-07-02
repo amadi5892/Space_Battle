@@ -10,4 +10,9 @@ $(document).keypress("a", function() {
 
 $(".box2").animate({
     "left": "3000px"
-}, 5000);
+}, 7500);
+
+
+// $(document).keydown(function(event) {
+//     alert(event.keyCode);
+// })
