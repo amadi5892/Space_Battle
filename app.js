@@ -45,30 +45,14 @@ $(function () {
                     if (key === numRes) {
                         forward1();
                         count++;
-                    } else if (key !== numRes) {
+                    } else {
                         console.log(key)
                         backward1();
+                        forward2();
                         count--;
                     }
-                } else if (count === 2) {
-                    if (key === numRes) {
-                        forward1();
-                        backward2();
-                        count++;
-                    } else {
-                        backward1();
-                        count--;
-                    }
-                } else if (count === 3) {
-                    if (key === numRes) {
-                        forward1();
-                        count++;
-                    } else {
-                        backward1();
-                        count--;
-                    }
-                }
-
+                };
+                
 
 
             });
@@ -83,8 +67,8 @@ $(function () {
             }
 
             //Move computer's car backward
-            function backward2() {
-                car2.css('left', parseInt(car2.css('left')) - 25);
+            function forward2() {
+                car2.css('left', parseInt(car2.css('left')) + 25);
             }
 
 
