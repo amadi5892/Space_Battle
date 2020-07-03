@@ -22,10 +22,15 @@ $(function () {
 
         });
 
-        // Generate random letters for user prompts
-    var result = letters.charAt(Math.floor(Math.random() * lettersLength));
+
+        setInterval(function() {
+            var result = letters.charAt(Math.floor(Math.random() * lettersLength));
         
     console.log(result)
+        },2000);
+
+        // Generate random letters for user prompts
+    
 
 
 
