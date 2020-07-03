@@ -5,7 +5,10 @@ $(function () {
     var speed = 50;
     var letters = 'ASKL';
     var lettersLength = letters.length;
-
+    var car1 = $(".box1");
+    var car2 = $(".box2");
+    var initial_pos = parseInt(car1.css('left'));
+    
 
     // $(".prompt").html("Hello You")
 
@@ -16,7 +19,7 @@ $(function () {
         var key = event.keyCode;
 
         // hit any key to start movement
-        $(document).keypress("a", function () {
+        $(document).keypress(function () {
             $(".lane").animate({
                 "left": "-=7600"
             }, 12000)
@@ -28,14 +31,20 @@ $(function () {
                 console.log(result)
             }, 2000);
 
-
+            
         });
 
+        // Move user car forward
+        function forward() {
+            car1.css('left', parseInt(car1.css('left')) + 50)
+        };
 
-
-
-
-
+        $(document).on('keydown', function(event) {
+            var key = event.keyCode;
+            if(key === 65) {
+                forward()
+            }
+        });
 
 
 
