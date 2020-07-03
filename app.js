@@ -36,12 +36,17 @@ $(function () {
 
         // Move user car forward
         function forward() {
-            car1.css('left', parseInt(car1.css('left')) + 50)
+            car1.css('left', parseInt(car1.css('left')) + 50);
         };
+
+        //Move user car backward
+        function backward() {
+            car2.css('left', parseInt(car2.css('left')) - 25);
+        }
 
         $(document).on('keydown', function(event) {
             var key = event.keyCode;
-            if(key === 65) {
+            if(key === 65 || key === 83 || key === 75 || key === 76) {
                 forward()
             }
         });
