@@ -1,5 +1,18 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
 .container {
+    border: solid red;
     position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+.lane {
+    position: absolute;
     background: url('./Appendex/Images/racetrack.jpg') center left repeat-x;
     height: 330px;
     width: 4300px;
