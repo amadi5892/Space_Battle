@@ -1,20 +1,33 @@
 .container {
-    border: solid;
-    height: 100vh;
+    position: relative;
+    background: url('./Appendex/Images/racetrack.jpg') center left repeat-x;
+    height: 330px;
+    width: 4300px;
+    border-right: dashed 16.5px white;
+    left: 0;
 }
+
+/* .lane {
+    background-color: #E2C044;
+    height: 30px;
+    width: 110px;
+    margin-top: 165px;
+    z-index: 2;
+} */
+
 .box1 {
     position: absolute;
     background-color: blue;
     width: 80px;
     height: 80px;
-    right: -80px;
+    left: 5;
 }
 
-.box2 {
+/* .box2 {
     position: absolute;
     background-color: red;
     width: 80px;
     height: 80px;
     margin-top: 105px;
     margin-left: 50px;
-}
+} */
