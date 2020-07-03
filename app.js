@@ -1,6 +1,6 @@
 $(function () {
     // Global variables
-    var num = 4300 - window.innerWidth;
+    var num = 8100 - window.innerWidth;
     var lane = $(".lane");
     var speed = 50;
 
@@ -12,8 +12,8 @@ $(function () {
         // hit any key to start movement
         $(document).keypress("a", function () {
             $(".lane").animate({
-                "left": "-=3800"
-            }, 2000)
+                "left": "-=7600"
+            }, 6000)
 
         });
 
