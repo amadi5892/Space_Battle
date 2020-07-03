@@ -5,8 +5,16 @@ body {
     margin: 0;
 }
 
-/* Create the container for the main screen of the game */
+/* Container for top dispaly */
 .container {
+    border: solid green;
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+/* Create the container for the main screen of the game */
+.screen {
     border: solid red;
     position: relative;
     height: 500px;

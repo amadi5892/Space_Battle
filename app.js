@@ -7,10 +7,11 @@ $(function () {
     var lettersLength = letters.length;
 
 
-    
+
 
     // The Game Function
     var game = $(function (event) {
+
         // for now the racetrack moves when we hit any key
         var key = event.keyCode;
 
@@ -18,19 +19,21 @@ $(function () {
         $(document).keypress("a", function () {
             $(".lane").animate({
                 "left": "-=7600"
-            }, 6000)
+            }, 12000)
+
+            // Generate random letters for user prompts
+            setInterval(function () {
+                var result = letters.charAt(Math.floor(Math.random() * lettersLength));
+                console.log(result)
+            }, 2000);
+
 
         });
 
 
-        setInterval(function() {
-            var result = letters.charAt(Math.floor(Math.random() * lettersLength));
-        
-    console.log(result)
-        },2000);
 
-        // Generate random letters for user prompts
-    
+
+
 
 
 
