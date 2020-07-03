@@ -1,32 +1,28 @@
 $(function () {
     // Global variables
     var num = 4300 - window.innerWidth;
-    // var container = $(".container"); // may not need
     var lane = $(".lane");
-    // var initial_pos = parseInt(lane.css('left')); // may not need
-    var speed = 20;
+    var speed = 50;
 
     // The Game Function
     var game = $(function (event) {
+        // for now the racetrack moves when we hit any key
         var key = event.keyCode;
 
+        // hit any key to start movement
         $(document).keypress("a", function () {
             $(".lane").animate({
                 "left": "-=3800"
             }, 2000)
-            // alert(num)
+
         });
 
-        if(key === 32){
-        var current_pos = parseInt(lane.css('left'));
 
-        // move racetrack
-            lane.css('left', current_pos - speed);
-            };
+
 
     });
 
-    
+
 
 
 })
