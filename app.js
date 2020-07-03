@@ -7,7 +7,7 @@ $(function () {
     var lettersLength = letters.length;
 
 
-
+    // $(".prompt").html("Hello You")
 
     // The Game Function
     var game = $(function (event) {
@@ -24,6 +24,7 @@ $(function () {
             // Generate random letters for user prompts
             setInterval(function () {
                 var result = letters.charAt(Math.floor(Math.random() * lettersLength));
+                $(".prompt").html(result);
                 console.log(result)
             }, 2000);
 
