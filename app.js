@@ -3,6 +3,11 @@ $(function () {
     var num = 8100 - window.innerWidth;
     var lane = $(".lane");
     var speed = 50;
+    var letters = 'ASKL';
+    var lettersLength = letters.length;
+
+
+    
 
     // The Game Function
     var game = $(function (event) {
@@ -16,6 +21,12 @@ $(function () {
             }, 6000)
 
         });
+
+        // Generate random letters for user prompts
+    var result = letters.charAt(Math.floor(Math.random() * lettersLength));
+        
+    console.log(result)
+
 
 
 
