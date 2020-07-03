@@ -46,7 +46,6 @@ $(function () {
                         forward1();
                         count++;
                     } else {
-                        console.log(key)
                         backward1();
                         forward2();
                         count--;
@@ -68,7 +67,7 @@ $(function () {
 
             //Move computer's car backward
             function forward2() {
-                car2.css('left', parseInt(car2.css('left')) + 25);
+                car2.css('left', parseInt(car2.css('left')) + 50);
             }
 
 
