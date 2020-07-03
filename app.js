@@ -7,8 +7,9 @@ $(function () {
     var lettersLength = letters.length;
     var car1 = $(".box1");
     var car2 = $(".box2");
-    var initial_pos = parseInt(car1.css('left'));
-    
+    var initial_pos = parseInt(car1.css('left')); // may not need
+    var result = '';
+
 
     // $(".prompt").html("Hello You")
 
@@ -19,36 +20,76 @@ $(function () {
         var key = event.keyCode;
 
         // hit any key to start movement
-        $(document).keypress(function () {
+        $(".start").click(function () {
             $(".lane").animate({
                 "left": "-=7600"
             }, 12000)
 
             // Generate random letters for user prompts
             setInterval(function () {
-                var result = letters.charAt(Math.floor(Math.random() * lettersLength));
+                result = letters.charAt(Math.floor(Math.random() * lettersLength));
                 $(".prompt").html(result);
                 console.log(result)
-            }, 2000);
+                return result;
+                }, 2000);
 
-            
-        });
 
-        // Move user car forward
-        function forward() {
-            car1.css('left', parseInt(car1.css('left')) + 50);
-        };
+                // Controls
+                $(document).on('keydown', function (event) {
+                    var key = event.keyCode;
 
-        //Move user car backward
-        function backward() {
-            car2.css('left', parseInt(car2.css('left')) - 25);
-        }
+                    var numRes = result.charCodeAt();
+                    var count = 0;
 
-        $(document).on('keydown', function(event) {
-            var key = event.keyCode;
-            if(key === 65 || key === 83 || key === 75 || key === 76) {
-                forward()
+                    while (count < 2) {
+                        if (key === numRes) {
+                            forward1();
+                            count++;
+                        } else if (key !== numRes || key === null) {
+                            backward1();
+                            count--;
+                        }
+                    };
+                    while (count === 2) {
+                        if (key === numRes) {
+                            forward1();
+                            backward2();
+                            count++;
+                        } else {
+                            backward1();
+                            count--;
+                        }
+                    };
+                    while (count === 3) {
+                        if (key === numRes) {
+                            forward1();
+                            count++;
+                        } else if (key !== numRes || key === null) {
+                            backward1();
+                            count--;
+                        }
+                    };
+
+
+
+            });
+
+            // Move user car forward & backward
+            function forward1() {
+                car1.css('left', parseInt(car1.css('left')) + 50);
+            };
+
+            function backward1() {
+                car1.css('left', parseInt(car1.css('left')) - 50);
             }
+
+            //Move computer's car backward
+            function backward2() {
+                car2.css('left', parseInt(car2.css('left')) - 25);
+            }
+
+
+
         });
 
 
