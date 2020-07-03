@@ -31,44 +31,43 @@ $(function () {
                 $(".prompt").html(result);
                 console.log(result)
                 return result;
-                }, 2000);
+            }, 2000);
 
 
-                // Controls
-                $(document).on('keydown', function (event) {
-                    var key = event.keyCode;
+            // Controls
+            $(document).on('keydown', function (event) {
+                var key = event.keyCode;
 
-                    var numRes = result.charCodeAt();
-                    var count = 0;
+                var numRes = result.charCodeAt();
+                var count = 0;
 
-                    while (count < 2) {
-                        if (key === numRes) {
-                            forward1();
-                            count++;
-                        } else if (key !== numRes || key === null) {
-                            backward1();
-                            count--;
-                        }
-                    };
-                    while (count === 2) {
-                        if (key === numRes) {
-                            forward1();
-                            backward2();
-                            count++;
-                        } else {
-                            backward1();
-                            count--;
-                        }
-                    };
-                    while (count === 3) {
-                        if (key === numRes) {
-                            forward1();
-                            count++;
-                        } else if (key !== numRes || key === null) {
-                            backward1();
-                            count--;
-                        }
-                    };
+                if (count < 2) {
+                    if (key === numRes) {
+                        forward1();
+                        count++;
+                    } else if (key !== numRes) {
+                        console.log(key)
+                        backward1();
+                        count--;
+                    }
+                } else if (count === 2) {
+                    if (key === numRes) {
+                        forward1();
+                        backward2();
+                        count++;
+                    } else {
+                        backward1();
+                        count--;
+                    }
+                } else if (count === 3) {
+                    if (key === numRes) {
+                        forward1();
+                        count++;
+                    } else {
+                        backward1();
+                        count--;
+                    }
+                }
 
 
 
