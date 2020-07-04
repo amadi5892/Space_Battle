@@ -11,27 +11,34 @@ $(function () {
     var result = '';
 
 
-// The title will fade out when the 'Start Game' button is hit
-    $(".start").click(function() {
-        $(".title").fadeOut("slow", function() {
-        });
+    // The title will fade out when the 'Start Game' button is hit
+    $(".start").click(function () {
+        $(".title").fadeOut("slow", function () {});
     });
 
-// The Gear Display will be hiiden when the document is ready
-    $(function() {
+    // The Gear Display will be hiiden when the document is ready
+    $(function () {
         $(".gear").hide();
     });
 
-// When the button is clicked it will fade out
-    $(".start").click(function () {
-        $(".start").fadeOut("slow", function () {
-        });
+    // The Prompt Display will be hidden when the document is ready
+    $(function () {
+        $(".prompt").hide();
     });
 
-// When the button is clicked the Gear Display will fade in
-$(".start").click(function () {
-    $(".gear").fadeIn("slow", function () {
+    // When the 'Start Game' button is clicked the button will fade out
+    $(".start").click(function () {
+        $(".start").fadeOut("slow", function () {});
     });
+
+    // When the 'Start Game' button is clicked the Gear Display will fade in
+    $(".start").click(function () {
+        $(".gear").fadeIn("slow", function () {});
+    });
+
+// When the 'Start Game' Button is clicked the Prompt Display will fade in
+$(".start").click(function () {
+    $(".prompt").fadeIn("slow", function () {});
 });
 
     // The Game Function
