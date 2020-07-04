@@ -5,8 +5,8 @@ $(function () {
     var speed = 50;
     var letters = 'ASKL';
     var lettersLength = letters.length;
-    var car1 = $(".box1");
-    var car2 = $(".box2");
+    var car1 = $("#car1");
+    var car2 = $("#car2");
     var initial_pos = parseInt(car1.css('left')); // may not need
     var result = '';
 
