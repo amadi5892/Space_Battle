@@ -17,11 +17,22 @@ $(function () {
         });
     });
 
+// The Gear Display will be hiiden when the document is ready
+    $(function() {
+        $(".gear").hide();
+    });
+
 // When the button is clicked it will fade out
     $(".start").click(function () {
         $(".start").fadeOut("slow", function () {
         });
     });
+
+// When the button is clicked the Gear Display will fade in
+$(".start").click(function () {
+    $(".gear").fadeIn("slow", function () {
+    });
+});
 
     // The Game Function
     var game = $(function (event) {
