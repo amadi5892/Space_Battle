@@ -11,10 +11,15 @@ $(function () {
     var result = '';
 
 
+// The title will fade out when the 'Start Game' button is hit
+    $(".start").click(function() {
+        $(".title").fadeOut("slow", function() {
+        });
+    });
+
 // When the button is clicked it will fade out
     $(".start").click(function () {
         $(".start").fadeOut("slow", function () {
-            // Animation complete.
         });
     });
 

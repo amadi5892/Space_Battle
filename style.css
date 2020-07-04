@@ -68,6 +68,7 @@ body {
     z-index: 2;
 }
 
+/* Title Display */
 .title {
     position: absolute;
     display: flex;
@@ -81,6 +82,24 @@ body {
     color: #E2C044;
     text-shadow: 2px 2px #393E41;
     left: 40%;
+    box-shadow: 2px 2px 2px #1E2019;
+    border-radius: 5%;
+}
+
+/* MPH Display */
+.gear {
+    position: absolute;
+    display: flex;
+    width: 213px;
+    height: 106px;
+    justify-content: center;
+    align-items: center;
+    background-color: #D3D0CB;
+    font-family: 'Bangers', cursive;
+    font-size: 60px;
+    color: #E2C044;
+    text-shadow: 2px 2px #393E41;
+    left: 5%;
     box-shadow: 2px 2px 2px #1E2019;
     border-radius: 5%;
 }
