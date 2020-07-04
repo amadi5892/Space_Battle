@@ -62,6 +62,8 @@ $(function () {
                 distance = car1_cur_pos - car2_cur_pos;
                 if(distance > 0) {
                     $("h2").html("Winner!");
+                } else if(distance === 0){
+                    $("h2").html("It's A Tie");
                 } else {
                     $("h2").html("You Lose");
                 }
