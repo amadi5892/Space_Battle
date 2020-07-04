@@ -11,7 +11,7 @@ $(function () {
     var result = '';
 
 
-
+// When the button is clicked it will fade out
     $(".start").click(function () {
         $(".start").fadeOut("slow", function () {
             // Animation complete.

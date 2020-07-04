@@ -3,11 +3,11 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
+    background-color: #587B7F;
 }
 
 /* Container for top dispaly */
 .container {
-    border: solid green;
     position: relative;
     height: 250px;
     width: 100%;
