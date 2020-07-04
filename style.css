@@ -119,3 +119,21 @@ body {
     box-shadow: 2px 2px 2px #1E2019;
     border-radius: 5%;
 }
+
+/* Result Display */
+.result {
+    position: absolute;
+    display: flex;
+    width: 213px;
+    height: 106px;
+    justify-content: center;
+    align-items: center;
+    background-color: #D3D0CB;
+    font-family: 'Bangers', cursive;
+    font-size: 60px;
+    color: #E2C044;
+    text-shadow: 2px 2px #393E41;
+    left: 80%;
+    box-shadow: 2px 2px 2px #1E2019;
+    border-radius: 5%;
+}

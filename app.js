@@ -28,6 +28,11 @@ $(function () {
         $(".prompt").hide();
     });
 
+    // The Result Display will be hidden when the document is ready
+    $(function () {
+        $(".result").hide();
+    });
+
     // When the 'Start Game' button is clicked the button will fade out
     $(".start").click(function () {
         $(".start").fadeOut("slow", function () {});
@@ -61,11 +66,17 @@ $(function () {
                 var car2_cur_pos = parseInt(car2.css('left'));
                 distance = car1_cur_pos - car2_cur_pos;
                 if(distance > 0) {
-                    $("h2").html("Winner!");
+                    $(".result").html("Winner!").fadeIn("slow", function() {
+
+                    });
                 } else if(distance === 0){
-                    $("h2").html("It's A Tie");
+                    $(".result").html("It's A Tie").fadeIn("slow", function() {
+                        
+                    });;
                 } else {
-                    $("h2").html("You Lose");
+                    $(".result").html("You Lose").fadeIn("slow", function() {
+                        
+                    });;
                 }
                 console.log(distance)
             })
