@@ -11,7 +11,7 @@ $(function () {
     var result = '';
 
 
-    // $(".prompt").html("Hello You")
+
 
     // The Game Function
     var game = $(function (event) {
@@ -26,12 +26,22 @@ $(function () {
             }, 12000)
 
             // Generate random letters for user prompts
-            setInterval(function () {
+            var tracker = 0;
+            var randoLetter = setInterval(function () {
                 result = letters.charAt(Math.floor(Math.random() * lettersLength));
                 $(".prompt").html(result);
+                tracker++;
                 console.log(result)
-                return result;
+                console.log(tracker)
+
+                // Canceled Random Letter Generator after 4 iteration 
+                if (tracker === 4) {
+                    clearInterval(randoLetter)
+                };
+
             }, 2000);
+
+
 
 
             // Controls
@@ -51,10 +61,12 @@ $(function () {
                         count--;
                     }
                 };
-                
+
 
 
             });
+
+
 
             // Move user car forward & backward
             function forward1() {
@@ -83,6 +95,8 @@ $(function () {
 
 
 })
+
+
 
 // $(document).keypress("a", function() {
 //     $(".container").animate({
