@@ -17,7 +17,7 @@ body {
 .screen {
     border: solid red;
     position: relative;
-    height: 500px;
+    height: 330px;
     width: 100%;
     overflow: hidden;
 }
@@ -49,4 +49,21 @@ body {
     height: 80px;
     top: 225px;
     left: 500px;
+}
+
+/* Start Game Button */
+.start {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background-color: #2D3A3A;
+    font-family: 'Bangers', cursive;
+    font-size: 60px;
+    color: #248232;
+    text-shadow: 2px 2px #FCFFFC;
+    opacity: 90%;
+    border-radius: 25%;
+    top: 25%;
+    left: 40%;
+    z-index: 2;
 }

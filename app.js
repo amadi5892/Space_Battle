@@ -12,6 +12,11 @@ $(function () {
 
 
 
+    $(".start").click(function () {
+        $(".start").fadeOut("slow", function () {
+            // Animation complete.
+        });
+    });
 
     // The Game Function
     var game = $(function (event) {
