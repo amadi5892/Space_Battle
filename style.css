@@ -33,21 +33,19 @@ body {
 }
 
 /* Place two cars on the track */
-.box1 {
+#car1 {
     position: absolute;
-    background-color: blue;
-    width: 80px;
-    height: 80px;
-    top: 25px;
+    font-size: 125px;
+    color: #2BA84A;
+    top: 5px;
     left: 500px;
 }
 
-.box2 {
+#car2 {
     position: absolute;
-    background-color: red;
-    width: 80px;
-    height: 80px;
-    top: 225px;
+    font-size: 125px;
+    color: #FCFFFC;
+    top: 205px;
     left: 500px;
 }
 
