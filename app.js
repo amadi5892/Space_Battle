@@ -2,14 +2,16 @@ $(function () {
     // Global variables
     var num = 8100 - window.innerWidth;
     var lane = $(".lane");
-    var speed = 50;
+    var lane_initial_pos = parseInt(lane.css('left'));
     var letters = 'ASKL';
     var lettersLength = letters.length;
     var car1 = $("#car1");
     var car2 = $("#car2");
-    var initial_pos = parseInt(car1.css('left')); // may not need
+    var car1_initial_pos = parseInt(car1.css('left'));
+    var car2_initial_pos = parseInt(car2.css('left'));
     var result = '';
-
+    var distance = car1_initial_pos - car2_initial_pos;
+    console.log(distance)
 
     // The title will fade out when the 'Start Game' button is hit
     $(".start").click(function () {
@@ -36,12 +38,13 @@ $(function () {
         $(".gear").fadeIn("slow", function () {});
     });
 
-// When the 'Start Game' Button is clicked the Prompt Display will fade in
-$(".start").click(function () {
-    $(".prompt").fadeIn("slow", function () {});
-});
-
-
+    // When the 'Start Game' Button is clicked the Prompt Display will fade in
+    $(".start").click(function () {
+        $(".prompt").fadeIn("slow", function () {});
+    });
+    
+    var lane_cur_pos = parseInt(lane.css('left'));
+    
 
     // The Game Function
     var game = $(function (event) {
@@ -53,22 +56,32 @@ $(".start").click(function () {
         $(".start").click(function () {
             $(".lane").animate({
                 "left": "-=7600"
-            }, 12000)
+            }, 12000, function() {
+                var car1_cur_pos = parseInt(car1.css('left'));
+                var car2_cur_pos = parseInt(car2.css('left'));
+                distance = car1_cur_pos - car2_cur_pos;
+                if(distance > 0) {
+                    $("h2").html("Winner!");
+                } else {
+                    $("h2").html("You Lose");
+                }
+                console.log(distance)
+            })
 
             // Generate random letters for user prompts
             var tracker = 0;
             var randoLetter = setInterval(function () {
                 result = letters.charAt(Math.floor(Math.random() * lettersLength));
-                $(".prompt").html("Press: " + result).fadeIn(600, function() {
+                $(".prompt").html("Press: " + result).fadeIn(600, function () {
 
-                }).fadeOut(1400, function() {
+                }).fadeOut(1400, function () {
 
-                    
+
 
                 });
                 tracker++;
 
-                
+
 
                 console.log(result)
                 console.log(tracker)
@@ -91,12 +104,12 @@ $(".start").click(function () {
                 var key = event.keyCode;
                 var numRes = result.charCodeAt();
                 var count = 0;
-                
+
                 if (count < 2) {
                     if (key === numRes) {
                         forward1();
                         count++;
-                        gear++; 
+                        gear++;
                     } else {
                         backward1();
                         forward2();
@@ -125,13 +138,13 @@ $(".start").click(function () {
                 car2.css('left', parseInt(car2.css('left')) + 50);
             }
 
-
+            console.log(lane_cur_pos)
 
         });
 
 
 
-
+        
     });
 
 
