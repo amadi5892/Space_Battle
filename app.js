@@ -85,6 +85,7 @@ $(".start").click(function () {
 
             // Controls & Gear Display
             var gear = 1;
+            showGear = $(".gear").html("Gear: " + gear);
 
             $(document).on('keydown', function (event) {
                 var key = event.keyCode;
