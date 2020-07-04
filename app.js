@@ -41,6 +41,8 @@ $(".start").click(function () {
     $(".prompt").fadeIn("slow", function () {});
 });
 
+
+
     // The Game Function
     var game = $(function (event) {
 
@@ -61,8 +63,13 @@ $(".start").click(function () {
 
                 }).fadeOut(1400, function() {
 
+                    
+
                 });
                 tracker++;
+
+                
+
                 console.log(result)
                 console.log(tracker)
 
@@ -76,22 +83,25 @@ $(".start").click(function () {
 
 
 
-            // Controls
+            // Controls & Gear Display
+            var gear = 1;
+
             $(document).on('keydown', function (event) {
                 var key = event.keyCode;
-
                 var numRes = result.charCodeAt();
                 var count = 0;
-
+                
                 if (count < 2) {
                     if (key === numRes) {
                         forward1();
                         count++;
+                        gear++; 
                     } else {
                         backward1();
                         forward2();
                         count--;
                     }
+                    showGear = $(".gear").html("Gear: " + gear);
                 };
 
 
