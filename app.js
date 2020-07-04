@@ -57,7 +57,11 @@ $(".start").click(function () {
             var tracker = 0;
             var randoLetter = setInterval(function () {
                 result = letters.charAt(Math.floor(Math.random() * lettersLength));
-                $(".prompt").html(result);
+                $(".prompt").html("Press: " + result).fadeIn(600, function() {
+
+                }).fadeOut(1400, function() {
+
+                });
                 tracker++;
                 console.log(result)
                 console.log(tracker)
