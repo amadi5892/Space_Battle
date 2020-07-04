@@ -15,7 +15,6 @@ body {
 
 /* Create the container for the main screen of the game */
 .screen {
-    border: solid red;
     position: relative;
     height: 330px;
     width: 100%;
