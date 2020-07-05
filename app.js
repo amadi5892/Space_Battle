@@ -11,6 +11,8 @@ $(function () {
     var car2_initial_pos = parseInt(car2.css('left'));
     var result = '';
     var distance = car1_initial_pos - car2_initial_pos;
+    var flame = $("#flame");
+    
     console.log(distance)
 
     // The title will fade out when the 'Start Game' button is hit
@@ -18,7 +20,7 @@ $(function () {
         $(".title").fadeOut("slow", function () {});
     });
 
-    // The Gear Display will be hiiden when the document is ready
+    // The Gear Display will be hidden when the document is ready
     $(function () {
         $(".gear").hide();
     });
@@ -31,6 +33,11 @@ $(function () {
     // The Result Display will be hidden when the document is ready
     $(function () {
         $(".result").hide();
+    });
+
+    // Flame will be hidden when the document is ready
+    $(function () {
+        $("#flame").hide();
     });
 
     // When the 'Start Game' button is clicked the button will fade out
@@ -155,8 +162,8 @@ $(function () {
 
         });
 
-
-
+        
+        
         
     });
 

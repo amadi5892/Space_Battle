@@ -48,6 +48,14 @@ body {
     left: 500px;
 }
 
+/* Boost Flame */
+#flame {
+    position: absolute;
+    font-size: 80px;
+    color: orange;
+    left: 420px;
+}
+
 /* Start Game Button */
 .start {
     position: absolute;
