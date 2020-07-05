@@ -107,9 +107,16 @@ $(function () {
                 console.log(tracker)
 
                 // Canceled Random Letter Generator after 4 iteration 
+                // Show flame when it enters gear 4
                 if (tracker === 4) {
                     clearInterval(randoLetter)
+                    flame.fadeIn("fast", function() {
+                        
+                    })
                 };
+
+                
+                
 
             }, 2000);
 
