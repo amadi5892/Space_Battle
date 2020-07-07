@@ -144,3 +144,19 @@ body {
     box-shadow: 2px 2px 2px #1E2019;
     border-radius: 5%;
 }
+
+.rules {
+    position: absolute;
+    width: 600px;
+    height: 320px;
+    background-color: #393E41;
+    border: solid #D3D0CB 2px;
+    color: #D3D0CB;
+    text-shadow: #E2C044;
+    text-align: center;
+    opacity: 90%;
+    font-family: 'Bangers', cursive;
+    font-size: 25px;
+    left: 30%;
+    z-index: 2;
+}

@@ -11,7 +11,7 @@ $(function () {
     var car2_initial_pos = parseInt(car2.css('left'));
     var result = '';
     var distance = car1_initial_pos - car2_initial_pos;
-    var flame = $("#flame");
+    
     
     console.log(distance)
 
@@ -110,9 +110,6 @@ $(function () {
                 // Show flame when it enters gear 4
                 if (tracker === 4) {
                     clearInterval(randoLetter)
-                    flame.fadeIn("fast", function() {
-                        
-                    })
                 };
 
                 
