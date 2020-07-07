@@ -40,6 +40,11 @@ $(function () {
         $("#flame").hide();
     });
 
+    // Rules will be hidden when the document is ready
+    $(function () {
+        $(".rules").hide();
+    });
+
     // When the 'Start Game' button is clicked the button will fade out
     $(".start").click(function () {
         $(".start").fadeOut("slow", function () {});
@@ -55,6 +60,15 @@ $(function () {
         $(".prompt").fadeIn("slow", function () {});
     });
     
+    // When the Rules button is clicked the Rules will fade in 
+    $(".instruct").click(function () {
+        $(".rules").fadeIn("slow", function () {});
+    });
+    
+    $(".close_rules").click(function () {
+        $(".rules").fadeOut("slow", function () {});
+    });
+
     var lane_cur_pos = parseInt(lane.css('left'));
     
 
