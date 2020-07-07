@@ -192,19 +192,13 @@ $(function () {
 })
 
 
-
-// $(document).keypress("a", function() {
-//     $(".container").animate({
-//         "left": -num
-//     }, 2000)
-
-// });
-
-// $(".box2").animate({
-//     "left": window.innerWidth - 80
-// }, 2000);
-
-
-// $(document).keydown(function(event) {
-//     alert(event.keyCode);
-// });
+// Resources
+// 
+// Flatty Bird
+// https://www.youtube.com/watch?v=Wrzr-QBVNNM&list=WL&index=2&t=1851s
+// 
+// JQuery Race Game
+// https://www.youtube.com/watch?v=QVSwX98kKFs&list=WL&index=3&t=1250s
+// 
+// jQuery Learn
+// https://learn.jquery.com/
