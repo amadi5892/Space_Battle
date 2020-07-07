@@ -65,6 +65,7 @@ $(function () {
         $(".rules").fadeIn("slow", function () {});
     });
     
+    // When the Close button is clicked the Rules will fade out
     $(".close_rules").click(function () {
         $(".rules").fadeOut("slow", function () {});
     });

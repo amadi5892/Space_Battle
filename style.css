@@ -160,3 +160,21 @@ body {
     left: 30%;
     z-index: 2;
 }
+
+.instruct {
+    width: 75px;
+    height: 40px;
+    background: #E2C044;
+    color: red;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+}
+
+.close_rules {
+    width: 75px;
+    height: 40px;
+    background: #E2C044;
+    color: red;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+}
